@@ -244,6 +244,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/21/java集合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="武振旺">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="武振旺的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/21/java集合/" itemprop="url">java集合</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T15:26:43+08:00">
+                2018-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/21/java集合/" class="leancloud_visitors" data-flag-title="java集合">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote><p>生存还是毁灭，这是一个值得思考的问题。</p>
+<footer><strong>David Levithan</strong><cite>莎士比亚《哈姆雷特》</cite></footer></blockquote>
+<h2 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h2><ul>
+<li>Map  和  Collection  接口，1.5 之后共同  继承 迭代接口</li>
+<li>1、接口List 线性表，   两种存储  分别实现，ArrayList(顺序存储) -动态数组、LinkedList(链式存储)；</li>
+<li>都可重复；</li>
+<li>2、ArrayList 动态数组，可以无限制的向动态数组中添加数据，原理  底层是一个固定的数组，但是随着数据元素的增多，而不断地扩充，</li>
+<li>默认为10，每次扩充大小的一半  为5，；第一次10+5；第二次 15+7；；；<h2 id="HashMap-三种遍历方式："><a href="#HashMap-三种遍历方式：" class="headerlink" title="HashMap 三种遍历方式："></a>HashMap 三种遍历方式：</h2>（1）、//第一种遍历方式<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Entry&lt;String,String&gt;&gt; sets1=maps.entrySet();</span><br><span class="line"><span class="keyword">for</span>(Entry entrys : sets1) &#123;</span><br><span class="line">	System.out.println(entrys.getKey());</span><br><span class="line">	System.out.println(entrys.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（2）、//遍历Key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Set &lt;String&gt;sets2 =maps.keySet();</span><br><span class="line"><span class="keyword">for</span>(String strings : sets2) &#123;</span><br><span class="line">	System.out.println(strings);</span><br><span class="line">	System.out.println(maps.get(strings));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>（3） 、//遍历  key；collection</p>
+<pre><code class="bash">Collection &lt;String&gt; cs= maps.values();
+<span class="keyword">for</span>(String value:cs) {
+    System.out.println(value);
+
+    //此行 输出null；映射关系，只能从 key 读出  value
+    System.out.println(maps.get(value)); 
+}
+System.out.println(<span class="string">"=============="</span>);
+</code></pre>
+<h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><ul>
+<li>构造方法可以初始化容量<ul>
+<li>3、JDK之后，专门提供了一种遍历集合（数组）的方法，  增强 for循环</li>
+<li>for(类型    元素 : 数组名)</li>
+<li><ul>
+<li>遍历的方法，1、 for循环；2、 增强for循环；3、 迭代器,生成迭代链表，通过while循环</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,7 +593,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -439,6 +601,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
